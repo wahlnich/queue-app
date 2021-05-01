@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111111;
+  font-family: "Noto Sans JP", sans-serif;
+  color: aliceblue;
+}
+
+.title-area:hover {
+  color: yello;
+}
+
+.title-area {
+  text-align: center;
+  padding: 200px;
+  padding-top: 0;
+}
