@@ -8,11 +8,33 @@
 }
 
 .title-area:hover {
-  color: yello;
+  color: yellow;
 }
 
 .title-area {
   text-align: center;
   padding: 200px;
   padding-top: 0;
+}
+
+.input-boxes {
+  column-count: 2;
+  column-gap: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+.input-box {
+  outline: none;
+  color: black;
+  background-color: #fa4454;
+  border-radius: 20px;
+  height: 50px;
+  padding: 10px;
+}
+
+.column {
+  margin: auto;
+  width: 100%;
 }
