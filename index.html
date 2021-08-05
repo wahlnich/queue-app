@@ -10,28 +10,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="script.js"></script>
+    <script async src="script.js"></script>
     <div class="title-area">
-    <h1>Redsovereign's Simple 10-Man Queue App</h1>
-    <h2>Enter your name and nine others to begin the process.</h2>
+    <h1>Redsovereign's 
+    Queue App</h1>
     </div>
 
-    <form class="input-boxes">
-        <div class="column">
-        <input class="input-box" type="text" id="input-0"><br>
-        <input class="input-box" type="text" id="input-1"><br>        
-        <input class="input-box" type="text" id="input-2"><br>
-        <input class="input-box" type="text" id="input-3"><br>
-        <input class="input-box" type="text" id="input-4"><br>
-        </div>
-        <div class="column">
-        <input class="input-box" type="text" id="input-5"><br>
-        <input class="input-box" type="text" id="input-6"><br>
-        <input class="input-box" type="text" id="input-7"><br>
-        <input class="input-box" type="text" id="input-8"><br>
-        <input class="input-box" type="text" id="input-9"><br>
-        </div>
+    <div class="render-area">
+    <!--Input box.-->
+    <!--
+    <div class="player-boxes input-box">
+        <form class="input-form">
+            <label for="pname">Player Name</label>
+            <input type="text" id="pname" name="pname"><br><br>
+            <input type="checkbox" id="ctrl" name="ctrl" value="controller">
+            <label for="ctrl">Controller</label>
+            <input type="checkbox" id="init" name="init" value="initiator">
+            <label for="init">Initiator</label>
+            <input type="checkbox" id="duel" name="duel" value="duelist">
+            <label for="duel">Duelist</label>
+            <input type="checkbox" id="sen" name="sen" value="sentinel">
+            <label for="sen">Sentinel</label>
+            <br><br><button class="submit-button">Enter Queue</button>
+        </form>
+    </div>
+    -->
 
-    </form>
+    <!--Generate box after hitting submit on the input form-->
+    <div class="player-boxes">
+        <h3>Player: Nick Wahl</h3>
+        <h4>Roles: </h4><br>
+        <button class="submit-button">Add to Team
+        </button> 
+    </div>
+    </div>
 </body>
 </html>

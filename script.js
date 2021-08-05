@@ -1,23 +1,41 @@
+'use strict';
+
+// Select HTML elements
+const title = document.querySelector('.render-area');
+
 // Create array 
-const players = [`red`,`jk`,`kira`,`beiree`,`lay`,`tenz`,`shahzam`,`superman`,`fran`,`subroza`];
+class QueueApp {
+    constructor() {};
 
-const OutputPlayers = players =>
-{
-    let outputString = ``;
+    // Get role string from array of roles
+    stringifyRoles = function(roles) {
+        let rolesString = "Roles: ";
 
-    // Pull players from the list and outputs it. Could be random in the future, right now it's gonna be first in first out
-    for(let i = 0; i < 10; i++) // only ever want 10 players
-    {
-        let currentPlayer;
-        currentPlayer = players[i];
+        roles.forEach(el => {
+            rolesString+=`${el}, `
+        });
 
-        outputString += currentPlayer;
+        return rolesString;
     }
 
-    // Clear the 10 names pulled from the array
-    for(let i = 0; i < 10; i++)
-    {
-        players.shift();
+    renderPlayerBox = function(playerName, roles) {
+        
+        // Get string for roles
+        const roleString = this.stringifyRoles(roles);
+
+        // Add HTML to page
+        const html = `
+        <div class="player-boxes">
+            <h3>Player: ${playerName}</h3>
+            <h4>${roleString}</h4><br>
+            <button class="submit-button">Add to Team
+            </button> 
+        </div>
+        `
+        title.insertAdjacentHTML('beforeend', html)
     }
 }
 
+const app = new QueueApp();
+
+app.renderPlayerBox('redsovereign', ['controller', 'sentinel'])

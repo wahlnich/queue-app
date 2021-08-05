@@ -1,14 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: #111111;
   font-family: "Noto Sans JP", sans-serif;
   color: aliceblue;
 }
 
-.title-area:hover {
-  color: yellow;
+*::selection {
+  color: aliceblue;
+  background-color: #111111;
 }
 
 .title-area {
@@ -17,24 +17,35 @@
   padding-top: 0;
 }
 
-.input-boxes {
-  column-count: 2;
-  column-gap: 0;
+.player-boxes {
+  display: block;
+  border: solid white;
+  border-radius: 25px;
+  padding: 20px;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
 }
 
-.input-box {
-  outline: none;
+#pname {
+  background-color: white;
   color: black;
-  background-color: #fa4454;
-  border-radius: 20px;
-  height: 50px;
-  padding: 10px;
+  border-radius: 10px;
+  height: 25px;
+  padding: 5px;
 }
 
-.column {
-  margin: auto;
-  width: 100%;
+#pname::selection {
+  color: blue;
+  background: palegoldenrod;
+}
+
+.submit-button {
+  padding: 10px;
+  width: fit-content;
+  border: solid white;
+  border-radius: 10px;
 }
