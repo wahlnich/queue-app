@@ -1,12 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import "./NewPerson.css";
+import Card from "../UI/Card";
+import NewPersonCheckboxes from "./NewPersonCheckboxes";
 
-function NewPerson() {
+function NewPerson(props) {
   return (
-    <div>
-      dkkd
-      <div></div>
-    </div>
+    <Card className="newperson">
+      <form className="input-form">
+        <label>Player Name: </label>
+        <input type="text"></input>
+        <br />
+        <NewPersonCheckboxes />
+      </form>
+    </Card>
   );
 }
 
