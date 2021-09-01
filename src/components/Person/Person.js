@@ -3,13 +3,21 @@ import Card from "../UI/Card";
 import "./Person.css";
 
 function Person(props) {
+  const roleArray = props.player.roles;
+
+  let roleString = "";
+
+  roleArray.forEach((role) => {
+    roleString += `${role} `;
+  });
+
   return (
     <Card className="person">
       <div>
-        <h3>Player: Nick Wahl</h3>
+        <h3>Player: {props.player.name}</h3>
       </div>
       <div>
-        <h4>Roles: </h4>
+        <h4>Roles: {roleString} </h4>
       </div>
     </Card>
   );
