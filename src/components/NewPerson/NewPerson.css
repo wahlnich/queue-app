@@ -1,0 +1,9 @@
+input[type="text"] {
+  border-radius: 12px;
+  height: 25px;
+  padding: 5px;
+}
+
+.checkboxes {
+  margin: 10px;
+}
