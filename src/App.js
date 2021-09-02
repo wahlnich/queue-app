@@ -21,17 +21,21 @@ const INIT_PLAYERS = [
 function App() {
   const [players, setPlayers] = useState(INIT_PLAYERS);
 
-  const addPlayerHandler = (player) => {
+  const savePlayerDataHandler = (enteredPlayerData) => {
+    const playerData = {
+      ...enteredPlayerData,
+      id: Math.random().toString(),
+    };
     setPlayers((prevPlayers) => {
-      return [player, ...prevPlayers];
+      return [...prevPlayers, playerData];
     });
   };
 
   return (
     <div className="App">
-      <NewPerson onAddPlayer={addPlayerHandler} />
-      {players.map((inputPlayer) => (
-        <Person player={inputPlayer} />
+      <NewPerson onAddPlayer={savePlayerDataHandler} />
+      {players.map((inputPlayer, index) => (
+        <Person player={inputPlayer} key={index} />
       ))}
     </div>
   );

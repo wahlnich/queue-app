@@ -4,7 +4,7 @@ import "./Person.css";
 
 function Person(props) {
   const roleArray = props.player.roles;
-
+  const key = props.id;
   let roleString = "";
 
   roleArray.forEach((role) => {
@@ -12,7 +12,7 @@ function Person(props) {
   });
 
   return (
-    <Card className="person">
+    <Card key={key} className="person">
       <div>
         <h3>Player: {props.player.name}</h3>
       </div>
