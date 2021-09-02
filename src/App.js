@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./App.css";
 import Person from "./components/Person/Person";
 import NewPerson from "./components/NewPerson/NewPerson";
+import PlayersGroupCard from "./components/UI/PlayersGroupCard";
 
 const INIT_PLAYERS = [
   {
@@ -34,9 +35,11 @@ function App() {
   return (
     <div className="App">
       <NewPerson onAddPlayer={savePlayerDataHandler} />
-      {players.map((inputPlayer, index) => (
-        <Person player={inputPlayer} key={index} />
-      ))}
+      <PlayersGroupCard>
+        {players.map((inputPlayer, index) => (
+          <Person player={inputPlayer} key={index} />
+        ))}
+      </PlayersGroupCard>
     </div>
   );
 }

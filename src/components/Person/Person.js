@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../UI/Card";
+import PlayerCard from "../UI/PlayerCard";
 import "./Person.css";
 
 function Person(props) {
@@ -12,14 +12,14 @@ function Person(props) {
   });
 
   return (
-    <Card key={key} className="person">
+    <PlayerCard key={key} className="person">
       <div>
         <h3>Player: {props.player.name}</h3>
       </div>
       <div>
         <h4>Roles: {roleString} </h4>
       </div>
-    </Card>
+    </PlayerCard>
   );
 }
 

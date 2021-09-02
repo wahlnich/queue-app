@@ -18,8 +18,25 @@ function NewPerson(props) {
   const duelChangeHandler = (e) => setEnteredDuel(e.target.value);
   const initChangeHandler = (e) => setEnteredInit(e.target.value);
 
+  // Validate data
+  const validationHandler = () => {
+    // Text input must exist
+    if (!enteredName) {
+      alert("Please enter the player's name!");
+      return false;
+    }
+    // at least one role must be chosen
+    if (!enteredCtrl && !enteredSen && !enteredDuel && !enteredInit) {
+      alert("You must choose at least one role!");
+      return false;
+    }
+    return true;
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
+
+    if (!validationHandler()) return;
 
     const playerData = {
       name: enteredName,
